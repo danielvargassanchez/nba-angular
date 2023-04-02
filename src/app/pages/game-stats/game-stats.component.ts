@@ -87,7 +87,7 @@ export class GameStatsComponent {
       width: DefaultSizeDialog.width,
       height: '120px',
       message: '<p class="text-center">Are you sure you want to remove this team?</p>',
-      actions: [closeAction, acceptAction, acceptAction, acceptAction],
+      actions: [closeAction, acceptAction],
     });
     ;
   }
