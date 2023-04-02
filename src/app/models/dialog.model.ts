@@ -1,4 +1,4 @@
-import { DefaultSizeDialog } from "src/constants/dialog";
+import { DefaultSizeDialog } from "../../constants/dialog";
 
 export class DialogConfiguration {
     width: number | string;

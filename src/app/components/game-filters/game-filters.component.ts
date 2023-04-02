@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { Team } from 'src/app/data.models';
-import { Division } from 'src/app/models/division.model';
+import { Team } from '../../models/data.models';
+import { Division } from '../../models/division.model';
 
 @Component({
   selector: 'app-game-filters',

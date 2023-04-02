@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { map, Observable } from 'rxjs';
 import { format, subDays } from 'date-fns';
-import { Game, Stats, Team, TrackedTeam } from '../data.models';
-import { environment } from 'src/environments/environment';
+import { Game, Stats, Team, TrackedTeam } from '../models/data.models';
+import { environment } from '../../environments/environment';
 import { ConsumeService } from './consume.service';
 import { Division } from '../models/division.model';
 

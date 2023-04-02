@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit, ViewEncapsulation } from '@angular/core';
 import { Subscription, merge, tap } from 'rxjs';
-import { DialogConfiguration } from 'src/app/models/dialog.model';
-import { DialogService } from 'src/app/services/dialog.service';
+import { DialogConfiguration } from '../../models/dialog.model';
+import { DialogService } from '../../services/dialog.service';
 
 @Component({
   selector: 'app-dialog',

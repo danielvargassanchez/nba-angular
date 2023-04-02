@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { Observable, map } from 'rxjs';
-import { ActionButton } from 'src/app/models/dialog.model';
-import { DialogService } from 'src/app/services/dialog.service';
-import { DefaultSizeDialog } from 'src/constants/dialog';
-import { Stats, Team, TrackedTeam } from '../../data.models';
+import { ActionButton } from '../../models/dialog.model';
+import { DialogService } from '../../services/dialog.service';
+import { DefaultSizeDialog } from '../../../constants/dialog';
+import { Stats, Team, TrackedTeam } from '../../models/data.models';
 import { Division, FiltersInfo } from '../../models/division.model';
 import { NbaService } from '../../services/nba.service';
 

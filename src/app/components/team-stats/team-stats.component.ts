@@ -1,10 +1,7 @@
-import {Component, EventEmitter, Input, OnDestroy, OnInit, Output} from '@angular/core';
-import {Observable, Subscription, tap} from 'rxjs';
-import {NbaService} from '../../services/nba.service';
-import {Game, Stats, Team, TrackedTeam} from '../../data.models';
-import { DropdownDaysOptions } from 'src/constants/team';
-import { ObservableService } from 'src/app/services/observable.service';
-import { FormControl } from '@angular/forms';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { DropdownDaysOptions } from '../../../constants/team';
+import { Team, TrackedTeam } from '../../models/data.models';
 
 @Component({
   selector: 'app-team-stats',

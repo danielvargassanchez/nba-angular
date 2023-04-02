@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, Output } from "@angular/core";
-import { Team, TrackedTeam } from "src/app/data.models";
-import { Division } from "src/app/models/division.model";
+import { Team, TrackedTeam } from "../app/models/data.models";
+import { Division } from "../app/models/division.model";
 
 @Component({ selector: 'app-dialog-information', template: '' })
 export class MockDialogInformationComponent {

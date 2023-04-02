@@ -3,8 +3,8 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { GameResultsComponent } from './game-results.component';
 import { ActivatedRoute, convertToParamMap } from '@angular/router';
 import { of } from 'rxjs';
-import { NbaService } from 'src/app/services/nba.service';
-import { Team, TrackedTeam } from 'src/app/data.models';
+import { NbaService } from '../../services/nba.service';
+import { Team, TrackedTeam } from '../../models/data.models';
 
 describe('GameResultsComponent', () => {
   let component: GameResultsComponent;

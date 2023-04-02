@@ -1,10 +1,10 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { DialogComponent } from './dialog.component';
-import { DialogService } from 'src/app/services/dialog.service';
+import { DialogService } from '../../services/dialog.service';
 import { of } from 'rxjs';
-import { DialogConfiguration } from 'src/app/models/dialog.model';
-import { MockDialogActionsComponent, MockDialogInformationComponent } from 'src/mocks/componentsMock';
+import { DialogConfiguration } from '../../models/dialog.model';
+import { MockDialogActionsComponent, MockDialogInformationComponent } from '../../../mocks/componentsMock';
 
 describe('DialogComponent', () => {
   let component: DialogComponent;

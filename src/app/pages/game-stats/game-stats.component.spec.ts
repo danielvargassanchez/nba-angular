@@ -1,11 +1,11 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { GameStatsComponent } from './game-stats.component';
-import { MockGameFiltersComponent, MockTeamStatsComponent } from 'src/mocks/componentsMock';
-import { NbaService } from 'src/app/services/nba.service';
+import { MockGameFiltersComponent, MockTeamStatsComponent } from '../../../mocks/componentsMock';
+import { NbaService } from '../../services/nba.service';
 import { of } from 'rxjs';
-import { DialogService } from 'src/app/services/dialog.service';
-import { TrackedTeam } from 'src/app/data.models';
+import { DialogService } from '../../services/dialog.service';
+import { TrackedTeam } from '../../models/data.models';
 
 describe('GameStatsComponent', () => {
   let component: GameStatsComponent;
