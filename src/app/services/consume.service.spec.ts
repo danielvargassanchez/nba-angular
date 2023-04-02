@@ -3,18 +3,22 @@ import { HttpClientTestingModule, HttpTestingController } from '@angular/common/
 import { ConsumeService } from './consume.service';
 import { ObservableService } from './observable.service';
 import { Observable } from 'rxjs';
+import { ErrorService } from './error.service';
 
 describe('ConsumeService', () => {
   let service: ConsumeService;
   let observableServiceSpy: jasmine.SpyObj<ObservableService>;
+  let errorServiceSpy: jasmine.SpyObj<ErrorService>;
   beforeEach(() => {
     observableServiceSpy = jasmine.createSpyObj<ObservableService>('ObservableService', ['setIsLoading']);
+    errorServiceSpy = jasmine.createSpyObj<ErrorService>('ErrorService',['error'])
     TestBed.configureTestingModule({
       imports: [
         HttpClientTestingModule
       ],
       providers: [
         { provide: ObservableService, useValue: observableServiceSpy },
+        { provide: ErrorService, useValue: errorServiceSpy }
       ]
     });
     service = TestBed.inject(ConsumeService);

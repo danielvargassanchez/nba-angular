@@ -1,7 +1,8 @@
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { ObservableService } from './observable.service';
 import { Observable, Subscriber } from 'rxjs';
+import { ObservableService } from './observable.service';
+import { ErrorService } from './error.service';
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +13,8 @@ export class ConsumeService {
 
   constructor(
     private http: HttpClient,
-    private observableService: ObservableService
+    private observableService: ObservableService,
+    private errorService: ErrorService
   ) { }
 
   httpGet<T>(
@@ -112,6 +114,7 @@ export class ConsumeService {
     observer: Subscriber<T>,
     error: any
   ): void {
+    this.errorService.error(error);
     this.handleLoading();
     observer.error(error);
   }
