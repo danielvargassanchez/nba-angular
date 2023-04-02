@@ -1,0 +1,33 @@
+<div class="row">
+  <div class="col-sm-11">
+    <select
+      (change)="changeConference($event.target)"
+      [value]="selectedConference"
+    >
+      <option value="" disabled>Select a conference</option>
+      <option [value]="conference" *ngFor="let conference of conferences">
+        {{ conference }}
+      </option>
+    </select>
+
+    <select (change)="changeDivision($event.target)" [value]="selectedDivision">
+      <option value="" disabled>Select a division</option>
+      <option
+        [value]="division.divisionName"
+        *ngFor="let division of divisions"
+      >
+        {{ division.divisionName }}
+      </option>
+    </select>
+
+    <select #teamSelect>
+      <option [value]="team.id" *ngFor="let team of teams">
+        {{ team.full_name }}
+      </option>
+    </select>
+
+    <button class="primary" (click)="trackTeam.emit(teamSelect.value)">
+      Track team
+    </button>
+  </div>
+</div>

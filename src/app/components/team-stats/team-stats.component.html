@@ -1,0 +1,48 @@
+<div class="card" *ngIf="track">
+  <div>
+    <h3>
+      {{ track.team.full_name }} [{{ track.team.abbreviation }}]
+      <span (click)="deleteSelectedTeam.emit(track.team)">&times;</span>
+    </h3>
+    <div class="d-flex justify-content-between">
+      <h6>{{ track.team.conference }}ern conference</h6>
+      <select #options [(ngModel)]="track.selectedDays" (ngModelChange)="selectedDay.emit(castString(options.value))">
+        <option [ngValue]="option" *ngFor="let option of dropdownOptions">
+          {{ option }}
+        </option>
+      </select>
+    </div>
+  </div>
+  <hr />
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        <p>Results of past {{ track.selectedDays }} days:</p>
+        <p>
+          <mark
+            class="tag"
+            *ngFor="let result of track.stats.lastGames"
+            [class]="result"
+            >{{ result }}</mark
+          >
+        </p>
+        <p>
+          Avg pts scored: <strong>{{ track.stats.averagePointsScored }}</strong>
+        </p>
+        <p>
+          Avg pts conceded: <strong>{{ track.stats.averagePointsConceded }}</strong>
+        </p>
+      </div>
+      <div class="col-sm-6">
+        <img
+          src="https://interstate21.com/nba-logos/{{ track.team.abbreviation }}.png"
+        />
+      </div>
+    </div>
+  </div>
+  <div>
+    <button class="tertiary" [routerLink]="'results/' + track.team.abbreviation">
+      See game results >>
+    </button>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+<div class="dialog" [ngClass]="display ? 'show-modal':''">
+  <div
+    class="dialog-content"
+    [style.width]="configuration.width"
+    [style.height]="configuration.height">
+
+    <app-dialog-information>
+      <ng-content></ng-content>
+      <div [innerHTML]="configuration.message"></div>
+    </app-dialog-information>
+    <app-dialog-actions>
+      <ng-container *ngFor="let action of configuration.actions">
+        <button type="button" [class]="action.styles" (click)="action.action()">
+          {{ action.message }}
+        </button>
+      </ng-container>
+    </app-dialog-actions>
+  </div>
+</div>

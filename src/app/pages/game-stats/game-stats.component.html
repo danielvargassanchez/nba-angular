@@ -1,0 +1,22 @@
+<div class="row">
+  <div class="col-sm-12">
+    <app-game-filters
+      [teams]="teams"
+      [divisions]="divisions"
+      [conferences]="conferences"
+      [selectedConference]="selectedConference"
+      [selectedDivision]="selectedDivision"
+      (conferenceSelected)="conferenceChange($event)"
+      (divisionSelected)="divisionChange($event)"
+      (trackTeam)="trackTeam($event)"
+    ></app-game-filters>
+  </div>
+
+  <app-team-stats
+    class="col-sm-12 col-md-4"
+    *ngFor="let track of nbaService.getTrackedTeams(); trackBy: trackByfn"
+    [track]="track"
+    (deleteSelectedTeam)="deleteTeam($event)"
+    (selectedDay)="reloadStats()">
+  </app-team-stats>
+</div>

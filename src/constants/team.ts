@@ -1,0 +1,1 @@
+export const DropdownDaysOptions = [6, 12, 20];

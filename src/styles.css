@@ -1,0 +1,11 @@
+/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/mini.css/dist/mini-default.min.css";
+.text-center {
+  text-align: center;
+}
+.d-flex {
+  display: flex;
+}
+.justify-content-between {
+  justify-content: space-between;
+}
